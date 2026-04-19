@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    --primary: 204 73% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 204 29% 93%;
+    --secondary-foreground: 150 10% 15%;
+
+    --muted: 204 15% 97%;
+    --muted-foreground: 150 5% 45%;
+
+    --accent: 204 73% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 11% 90%;
+    --input: 204 11% 90%;
+    --ring: 204 73% 38%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 204 73% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 204 29% 93%;
+    --sidebar-accent-foreground: 150 10% 15%;
+    --sidebar-border: 204 11% 90%;
+    --sidebar-ring: 204 73% 38%;
+
+    /* Custom tokens */
+    --brand-green: 204 73% 38%;
+    --brand-green-light: 204 29% 93%;
+    --brand-dark: 150 10% 15%;
+    --brand-steel: 210 10% 60%;
+    --hero-overlay: linear-gradient(135deg, hsla(204, 73%, 38%, 0.85), hsla(150, 10%, 15%, 0.9));
+    --section-alt: 204 15% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, hsla(204, 73%, 38%, 0.85), hsla(150, 10%, 15%, 0.9));
+  }
+
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+}
